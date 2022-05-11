@@ -1,5 +1,5 @@
-# cd /var/lib/jenkins/workspace
-aws iam list-users | grep UserName | cut -d:  -f2 | sed -e 's/"/ /g'| sed -e 's/,//g'> user_list.txt
+# cd /var/lib/jenkins/workspace/clone_user_file
+aws iam list-users | grep UserName | cut -d:  -f2 | sed -e 's/"/ /g'| sed -e 's/,/ /g'> user_list.txt
 while read u
 do 
     echo "======|| creating $u ||======="
